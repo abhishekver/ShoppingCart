@@ -6,17 +6,17 @@ import org.asa.offers.BuyOneGetOne;
 import org.asa.offers.Offers;
 import org.asa.offers.ThreeForPriceOfTwo;
 
-import java.util.HashMap;
+import java.util.EnumMap;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class CheckoutServiceImpl implements CheckoutService {
 
-    private final Map<Offer, Offers> offersMap;
+    private final EnumMap<Offer, Offers> offersMap;
 
     public CheckoutServiceImpl() {
-        offersMap = new HashMap<>();
+        offersMap = new EnumMap<>(Offer.class);
         offersMap.put(Offer.BUY_ONE_GET_ONE, new BuyOneGetOne());
         offersMap.put(Offer.THREE_FOR_PRICE_OF_TWO, new ThreeForPriceOfTwo());
     }
@@ -42,10 +42,8 @@ public class CheckoutServiceImpl implements CheckoutService {
 
     private Map<Fruit, Integer> getCartMap(List<Fruit> fruits) {
 
-        Map<Fruit, Integer> cartMap = new HashMap<>();
-        fruits.forEach(fruit -> {
-            cartMap.merge(fruit, 1, Integer::sum);
-        });
+        EnumMap<Fruit, Integer> cartMap = new EnumMap<>(Fruit.class);
+        fruits.forEach(fruit -> cartMap.merge(fruit, 1, Integer::sum));
 
         return cartMap;
     }
