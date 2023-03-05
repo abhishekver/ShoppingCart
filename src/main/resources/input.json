@@ -1,0 +1,65 @@
+{
+  "inputs": [
+    {
+      "fruits": [
+        "APPLE",
+        "ORANGE",
+        "APPLE",
+        "APPLE",
+        "APPLE",
+        "ORANGE",
+        "ORANGE",
+        "ORANGE",
+        "ORANGE",
+        "APPLE"
+      ],
+      "offers": {
+        "APPLE": "BUY_ONE_GET_ONE",
+        "ORANGE": "THREE_FOR_PRICE_OF_TWO"
+      }
+    },
+    {
+      "fruits": [
+        "APPLE",
+        "ORANGE",
+        "APPLE",
+        "ORANGE",
+        "ORANGE",
+        "APPLE"
+      ],
+      "offers": {
+        "APPLE": "BUY_ONE_GET_ONE"
+      }
+    },
+    {
+      "fruits": [
+        "APPLE",
+        "ORANGE",
+        "APPLE",
+        "ORANGE",
+        "ORANGE",
+        "APPLE"
+      ]
+    },
+    {
+      "fruits": [
+        "APPLE",
+        "ORANGE",
+        "APPLE",
+        "APPLE",
+        "APPLE",
+        "ORANGE",
+        "ORANGE",
+        "ORANGE",
+        "ORANGE",
+        "APPLE",
+        "ORANGE",
+        "ORANGE",
+        "APPLE"
+      ],
+      "offers": {
+        "ORANGE": "THREE_FOR_PRICE_OF_TWO"
+      }
+    }
+  ]
+}
